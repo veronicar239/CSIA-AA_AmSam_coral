@@ -1,0 +1,87 @@
+---
+title: "AA-d13C_fingerprint"
+author: "Veronica Radice"
+date: "10/16/2023"
+output: html_document
+---
+
+```{r, global_options, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message=FALSE, tidy.opts=list(width.cutoff=70), tidy=TRUE)
+```
+
+```{r, echo=FALSE}
+library(dplyr)
+```
+
+
+#### working environment
+
+```{r}
+setwd("/Users/veronica/Documents/Rprojects/postdoc\ Rprojects/ODU_postdoc_Rprojects/AmSam_isotopes/CSIA-AA_AmSam_coral")
+```
+
+### AA d13C data
+
+```{r}
+# changed d13C to d13C_AA because will merge with meta data sheet that has bulk isotope data
+aa.d13C <- read.csv("AA_C_data_RadiceCoral_20230821_JDC.csv", header = TRUE)
+
+aa.d13C[sapply(aa.d13C, is.character)] <- lapply(aa.d13C[sapply(aa.d13C, is.character)], as.factor)
+
+head(aa.d13C)
+```
+
+
+```{r}
+# filter out AA standards (sample_ID = NA)
+aa.d13C <- subset(aa.d13C, Vial_Sample_ID != "NA")
+aa.d13C <- droplevels(aa.d13C)
+```
+
+### summary - sample set
+13 AA each sample
+```{r}
+aa.d13C %>% 
+  group_by(Vial_Sample_ID) %>%
+      dplyr::summarise(count = n())
+```
+
+### meta data
+
+```{r}
+meta <- read.csv("AmericanSamoa_Coral-isotopes_Master_2023-10.csv", header = TRUE)
+
+meta[sapply(meta, is.character)] <- lapply(meta[sapply(meta, is.character)], as.factor)
+
+head(meta)
+```
+
+```{r}
+aa.d13C.meta <- meta %>% 
+  inner_join(aa.d13C, by = "Vial_Sample_ID")
+
+dim(aa.d13C.meta)
+```
+
+### sources
+
+```{r}
+sources <- read.csv("AmericanSamoa_Coral-isotopes_Master_2023-10.csv", header = TRUE)
+
+sources[sapply(sources, is.character)] <- lapply(sources[sapply(sources, is.character)], as.factor)
+
+head(sources)
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -1,0 +1,342 @@
+Date_collection,Site,Group,Genus,Species,Genus_species,Depth,Depth_m,ITS2_top1,ITS2_top1_details,ITS2_top2,ITS2_other-top,Symbiont-genus-dominant,Symbiont_Literature,Literature ref,Vial_Sample_ID,Notes_2022,mg_tissue_2022,Status_2022,Status_2023,mg_tissue_2023,Tissue-remaining_2023,Sample_ID,CSIA-AA,CSIA-AA_Priority-rank,d13C,d15N,C_microg,N_microg,CN,Weight_microg,C_weight-percent,N_weight-percent,RNAseq,Niche,Morphology,Size_fraction,Type,Genus_species_morph
+20220302,Leone,Coral Host,Leptoseris,glabra,Leptoseris glabra,Mesophotic,37.3,C21,"C21,C21a,C21.12",C17,C3*,Cladocopium,,,DS2_02_Host,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.13,Yes,Host_AS_S1_DS2_02,d13C,1,-17.98,6.25,392.4,78.8,5.8,1965,20,4,Yes,,,,Specialist,Leptoseris glabra
+20220302,Leone,Coral Host,Leptoseris,glabra,Leptoseris glabra,Mesophotic,37.3,C27.1,,C3*,C3*,Cladocopium,,,DS2_03_Host,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.29,Yes,Host_AS_S1_DS2_03,d13C,2,-18.54,6.64,405.9,87.1,5.4,1919,21.2,4.5,Yes,,,,Specialist,Leptoseris glabra
+20220302,Leone,Coral Host,Leptoseris,glabra,Leptoseris glabra,Mesophotic,38.1,C27.1,,C42b,C3*,Cladocopium,,,DS2_05_Host,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.35,Yes,Host_AS_S1_DS2_05,d13C,3,-18.83,6.98,456.8,91.4,5.8,1960,23.3,4.7,Yes,,,,Specialist,Leptoseris glabra
+20220302,Leone,Coral Host,Leptoseris,glabra,Leptoseris glabra,Mesophotic,38.1,D4,,D5,"other D, C15*",Durusdinium,,,DS2_07_Host,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.12,Yes,Host_AS_S1_DS2_07,d13C,4,-19.84,6.88,452.4,92.4,5.7,2015,22.5,4.6,Yes,,,,Specialist,Leptoseris glabra
+20220302,Leone,Coral Host,Leptoseris,glabra,Leptoseris glabra,Mesophotic,38.0,C27.1,,C3*,C3*,Cladocopium,,,DS2_08_Host,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.38,Yes,Host_AS_S1_DS2_08,d13C,5,-17.03,7,414.8,85.7,5.6,1982,20.9,4.3,Yes,,,,Specialist,Leptoseris glabra
+20220302,Leone,Symbiont,Leptoseris,scabra,Leptoseris scabra,Mesophotic,37.3,C21,"C21.14,C21,_C21.12,_C21.16,_C21a",,"C3*, C17",Cladocopium,,,DS2_01_Sym,,5.13,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DS2_01,d13C,6,,,,,,,,,,,,,Specialist,Leptoseris scabra
+20220302,Leone,Symbiont,Leptoseris,glabra,Leptoseris glabra,Mesophotic,37.3,C27.1,,C3*,C3*,Cladocopium,,,DS2_03_Sym,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.11,Yes,Sym_AS_S1_DS2_03,d13C,7,,,,,,,,,,,,,Specialist,Leptoseris glabra
+20220302,Leone,Symbiont,Leptoseris,glabra,Leptoseris glabra,Mesophotic,38.1,C27.1,,C42b,C3*,Cladocopium,,,DS2_05_Sym,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.12,Yes,Sym_AS_S1_DS2_05,d13C,8,,,,,,,,,,,,,Specialist,Leptoseris glabra
+20220302,Leone,Symbiont,Leptoseris,glabra,Leptoseris glabra,Mesophotic,38.1,D4,,D5,"other D, C15*",Durusdinium,,,DS2_07_Sym,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.37,Yes,Sym_AS_S1_DS2_07,d13C,9,,,,,,,,,,,,,Specialist,Leptoseris glabra
+20220302,Leone,Symbiont,Leptoseris,glabra,Leptoseris glabra,Mesophotic,38.0,C27.1,,C3*,C3*,Cladocopium,,,DS2_08_Sym,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.26,Yes,Sym_AS_S1_DS2_08,d13C,10,,,,,,,,,,,,,Specialist,Leptoseris glabra
+20220226,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,"C1b, C3u, C1b/D14","LaJeunesse 2010- Thailand, Tanzania",Lm_003_Host,Derivatized September-2022,,Derivatized- at URI,Acid Hydrolyzed,3.42,Yes,Host_AS_S1_003,d13C,11,-21.82,5.68,453.3,92.5,5.7,2039,22.2,4.5,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_017_Host,Derivatized September-2022,,Derivatized- at URI,Acid Hydrolyzed,3.12,Yes,Host_AS_S1_017,d13C,12,-21.31,6.13,524,102.6,6,2026,25.9,5.1,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_016_Host,Derivatized September-2022,,Derivatized- at URI,Acid Hydrolyzed,3.42,Yes,Host_AS_S1_016,d13C,13,-21.18,5.5,498.1,96.4,6,2085,23.9,4.6,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220228,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_008_Host,,,,Acid Hydrolyzed,3.31,,Host_AS_S1_008,d13C,14,-20.3,4.6,496.5,100.7,5.8,1929,25.7,5.2,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220228,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_009_Host,,,,Acid Hydrolyzed,3.25,,Host_AS_S1_009,d13C,15,-19.97,5.52,369.7,78,5.5,1923,19.2,4.1,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220225,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_001_Sym,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.43,Yes,Sym_AS_S1_001,d13C,16,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_017_Sym,Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.13,Yes,Sym_AS_S1_017,d13C,17,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220228,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_008_Sym,,,,Acid Hydrolyzed,3.37,Yes,Sym_AS_S1_008,d13C,18,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220228,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_009_Sym,,,,Acid Hydrolyzed,3.14,Yes,Sym_AS_S1_009,d13C,19,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,ITS2seq,,,Lm_015_Sym,,,,Acid Hydrolyzed,3.22,Yes,Sym_AS_S1_015,d13C,20,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,36.5,,,,,ITS2seq,,,DG2_10_Host,All DG2 host Derivatized July-2022,,Derivatized- at URI,Acid Hydrolyzed,3.43,Yes,Host_AS_S1_DG2_10,d13C,21,-19.42,5.91,264.2,63.1,4.9,1937,13.6,3.3,No,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.8,D11,,D1*,,Durusdinium,,,DG2_04_Host,"originally missing, might have been the extra DG2_1 vial - re-weighed and acid hydrolyzed sample",,Derivatized- at URI,Acid Hydrolyzed,3.37,Yes,Host_AS_S1_DG2_04,d13C,22,-18.37,5.99,312.6,67.6,5.4,1953,16,3.5,Yes,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.6,D6,,D1*,,Durusdinium,,,DG2_07_Host,,,Derivatized- at URI,Acid Hydrolyzed,3.38,Yes,Host_AS_S1_DG2_07,d13C,23,-19.04,5.88,340.9,71,5.6,1932,17.6,3.7,Yes,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.4,C15,"C15.7,C15h,C15m,C15.2_(type_1),C15,C15.8,etc",,,Cladocopium,,,DG2_02_Host,,,Derivatized- at URI,Acid Hydrolyzed,3.18,Yes,Host_AS_S1_DG2_02,d13C,24,-16.87,6.46,290,65.5,5.2,1951,14.9,3.4,Yes,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,36.7,,,,,ITS2seq,,,DG2_09_Host,,,Derivatized- at URI,Acid Hydrolyzed,3.35,Yes,Host_AS_S1_DG2_09,d13C,25,-16.54,5.9,259.5,59.5,5.1,1967,13.2,3,No,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,36.5,,,,,ITS2seq,,,DG2_10_Sym,,3.51,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DG2_10,d13C,26,,,,,,,,,,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.8,D11,,D1*,,Durusdinium,,,DG2_04_Sym,,4.68,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DG2_04,d13C,27,,,,,,,,,,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.6,D6,,D1*,,Durusdinium,,,DG2_07_Sym,,3.1,Acid Hydrolyzed,,,No,Sym_AS_S1_DG2_07,d13C,28,,,,,,,,,,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.4,C15,"C15.7,C15h,C15m,C15.2_(type_1),C15,C15.8,etc",,,Cladocopium,,,DG2_02_Sym,,3.66,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DG2_02,d13C,29,,,,,,,,,,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,36.7,,,,,ITS2seq,,,DG2_09_Sym,,4.83,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DG2_09,d13C,30,,,,,,,,,,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_023_Host,,5.08,Acid Hydrolyzed,,,,Host_AS_S1_023,d13C,31,-13.42,6.19,473.9,111.6,5,2103,22.5,5.3,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_026_Host,,5.02,Acid Hydrolyzed,,,,Host_AS_S1_026,d13C,32,-13.38,5.59,377.8,81.2,5.4,2029,18.6,4,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_022_Host,,4.98,Acid Hydrolyzed,,,,Host_AS_S1_022,d13C,33,-13.18,5.6,515.1,113.9,5.3,2105,24.5,5.4,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_021_Host ,,5.01,Acid Hydrolyzed,,,,Host_AS_S1_021,d13C,34,-12.79,6.1,426.9,103.7,4.8,2086,20.5,5,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_024_Host,,5,Acid Hydrolyzed,,,,Host_AS_S1_024,d13C,35,-12.58,5.51,417.3,94.2,5.2,1931,21.6,4.9,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_023_Sym,,4.9,Acid Hydrolyzed,,,Yes,Sym_AS_S1_023,d13C,36,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_026_Sym,,5.07,Acid Hydrolyzed,,,Yes,Sym_AS_S1_026,d13C,37,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_022_Sym,,4.95,Acid Hydrolyzed,,,Yes,Sym_AS_S1_022,d13C,38,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_021_Sym,,3.7,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_021,d13C,39,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,Cladocopium,,,Mg_024_Sym,,5.02,Acid Hydrolyzed,,,Yes,Sym_AS_S1_024,d13C,40,,,,,,,,,,,,,Generalist,Montipora grisea
+20220307,Fagatele,Plankton,,,"Plankton, >250 um",Surface,,,,,,,,,P_005-R1,,4.98,Acid Hydrolyzed,,,,Plankton_AS_P_005-R1,d13C,41,-19.96,8.15,592.4,128.1,5.4,2512,23.6,5.1,,,,>250 um,,
+20220307,Fagatele,Plankton,,,"Plankton, 100-250 um",Surface,,,,,,,,,P_006-R1,,4.82,Acid Hydrolyzed,,,,Plankton_AS_P_006-R1,d13C,42,-15.22,6.96,365,53.7,7.9,2436,15,2.2,,,,100-250 um,,
+20220305,Taema,Plankton,,,"Plankton, >250 um",Surface,,,,,,,,,P_003,,4.89,Acid Hydrolyzed,,,,Plankton_AS_P_003,d13C,43,-18.9,8.76,545.2,110.6,5.8,2604,21,4.3,,,,>250 um,,
+20220305,Taema,Plankton,,,"Plankton, 100-250 um",Surface,,,,,,,,,P_004,,4.92,Acid Hydrolyzed,,,,Plankton_AS_P_004,d13C,44,-20.72,7.75,383.3,81.8,5.5,2437,15.7,3.4,,,,100-250 um,,
+20220308,Fagasa,Plankton,,,"Plankton, 100-250 um",Surface,,,,,,,,,P_009-R1,,4.9,Acid Hydrolyzed,,,,Plankton_AS_P_009-R1,d13C,45,-19.96,7.7,487.7,91.5,6.2,2333,20.9,3.9,,,,100-250 um,,
+20220226,Leone,POM,,,,Shallow,5-10m,,,,,,,,POM_05,To discuss:  Sample is 1/2 47 mm GFF. Use whole sample for injection? Likely low biomass (oligotrophic coral reef waters),,,Acid Hydrolyzed,65.97,,AS_POM_05,d13C,46,,,,,,,,,,,,0.7 um,,
+20220228,Leone,POM,,,,Mesophotic,36.7,,,,,,,,POM_07,To discuss:  Sample is 1/2 47 mm GFF. Use whole sample for injection? Likely low biomass (oligotrophic coral reef waters),,,Acid Hydrolyzed,82.02,,AS_POM_07,d13C,47,,,,,,,,,,,,0.7 um,,
+20220301,Leone,POM,,,,Shallow,5-10m,,,,,,,,POM_09,To discuss:  Sample is 1/2 47 mm GFF. Use whole sample for injection? Likely low biomass (oligotrophic coral reef waters),,,Acid Hydrolyzed,91.34,,AS_POM_09,d13C,48,,,,,,,,,,,,0.7 um,,
+20220302,Leone,POM,,,,Mesophotic,37.6,,,,,,,,POM_11,To discuss:  Sample is 1/2 47 mm GFF. Use whole sample for injection? Likely low biomass (oligotrophic coral reef waters),,,Acid Hydrolyzed,70.76,,AS_POM_11,d13C,49,,,,,,,,,,,,0.7 um,,
+20220304,Leone,POM,,,,Shallow,5-10m,,,,,,,,POM_13,To discuss:  Sample is 1/2 47 mm GFF. Use whole sample for injection? Likely low biomass (oligotrophic coral reef waters),,,Acid Hydrolyzed,77.57,,AS_POM_13,d13C,50,,,,,,,,,,,,0.7 um,,
+20220302,Leone,Coral Host,Leptoseris,scabra,Leptoseris scabra,Mesophotic,38.7,,,,,,,,DS2_4 host,,5.17,Acid Hydrolyzed,,,,Host_AS_S1_DS2_04,Back up,51,-18.85,6.53,422.3,85,5.8,1947,21.7,4.4,Yes,,,,Specialist,Leptoseris scabra
+20220302,Leone,Symbiont,Leptoseris,scabra,Leptoseris scabra,Mesophotic,38.7,,,,,,,,DS2_4 symb,,4.11,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DS2_04,Back up,52,,,,,,,,,,,,,Specialist,Leptoseris scabra
+20220302,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,015 host,,,,Acid Hydrolyzed,3.15,,Host_AS_S1_015,Back up,53,-19.8,5.21,478.1,95.8,5.8,1953,24.5,4.9,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220228,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,007 symb,,,,Acid Hydrolyzed,3.18,Yes,Sym_AS_S1_007,Back up,54,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.8,,,,,,,,DG2_6 host,,,,Acid Hydrolyzed,3.37,,Host_AS_S1_DG2_06,Back up,55,-17.03,6.26,260.6,57,5.3,1911,13.6,3,Yes,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.8,,,,,,,,DG2_6 symb,,,,Acid Hydrolyzed,3.18,Yes,Sym_AS_S1_DG2_06,Back up,56,,,,,,,,,,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,019 host,,,,Acid Hydrolyzed,3.15,,Host_AS_S1_019,Back up,57,-13.6,5.94,408.1,96.5,4.9,1937,21.1,5,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,019 symb,,,,Acid Hydrolyzed,3.22,Yes,Sym_AS_S1_019,Back up,58,,,,,,,,,,,,,Generalist,Montipora grisea
+20220216,Fagamalo,Plankton,,,"Plankton, >250 um",Surface,,,,,,,,,P_001,,4.95,Acid Hydrolyzed,,,,Plankton_AS_P_001,Back up,59,-18.83,7.93,729.6,134.8,6.3,2365,30.9,5.7,,,,>250 um,,
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,3.8,,,,,,,,Pver_01 host,,5.07,Acid Hydrolyzed,,,,Host_S1_Pver_01,d13C,60,-19.32,6.31,616.9,123.4,5.8,1969,31.3,6.3,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,4.2,,,,,,,,Pver_10 host,,5.09,Acid Hydrolyzed,,,,Host_S1_Pver_10,d13C,61,-18.58,6.36,586.6,119.5,5.7,2039,28.8,5.9,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,4.4,,,,,,,,Pver_05 host,,4.96,Acid Hydrolyzed,,,,Host_S1_Pver_05,d13C,62,-19.12,5.95,660.8,125.7,6.1,1947,33.9,6.5,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.1,,,,,,,,Pver_07 host,,4.94,Acid Hydrolyzed,,,,Host_S1_Pver_07,d13C,63,-18.56,6.13,611.5,111.4,6.4,1975,31,5.6,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.6,,,,,,,,Pver_06 host,,5.16,Acid Hydrolyzed,,,,Host_S1_Pver_06,d13C,64,-18.83,6.27,642.6,125.7,6,2089,30.8,6,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,3.8,,,,,,,,Pver_01 symb,,5.12,Acid Hydrolyzed,,,Yes,Sym_S1_Pver_01,d13C,65,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,4.2,,,,,,,,Pver_10 symb,,5.07,Acid Hydrolyzed,,,Yes,Sym_S1_Pver_10,d13C,66,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,4.4,,,,,,,,Pver_05 symb,,3.02,Acid Hydrolyzed,,,No,Sym_S1_Pver_05,d13C,67,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.1,,,,,,,,Pver_07 symb,,2.98,Acid Hydrolyzed,,,No,Sym_S1_Pver_07,d13C,68,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.6,,,,,,,,Pver_06 symb,,4.88,Acid Hydrolyzed,,,Tiny amount,Sym_S1_Pver_06,d13C,69,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220216,Fagamalo,Plankton,,,"Plankton, 100-250 um",Surface,,,,,,,,,P_002,,2.17,Acid Hydrolyzed,,,,Plankton_AS_P_002,d13C,70,-15.64,7.46,335.6,53.6,7.3,1830,18.3,2.9,,,,100-250 um,,
+20220308,Fagasa,Plankton,,,"Plankton, >250 um",Surface,,,,,,,,,P_008 - R1,,4.94,Acid Hydrolyzed,,,,Plankton_AS_P_008-R1,d13C,71,-17.55,8.64,485.2,80.5,7,2557,19,3.2,,,,>250 um,,
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,37.5,,,,,,,,DS1_1 host,,5.04,Acid Hydrolyzed,,,,Host_AS_S1_DS1_01,d13C,72,-16.93,5.79,419.4,74.8,6.5,2006,20.9,3.7,Yes,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,37.3,,,,,,,,DS1_3 host,,4.94,Acid Hydrolyzed,,,,Host_AS_S1_DS1_03,d13C,73,-16.84,5.97,449.4,81.7,6.4,1927,23.3,4.2,Yes,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.8,,,,,,,,DS1_6 host,,5.07,Acid Hydrolyzed,,,,Host_AS_S1_DS1_06,d13C,74,-16.83,5.88,545.3,94.4,6.7,1980,27.5,4.8,Yes,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,35.9,,,,,,,,DS1_10 host,,5.09,Acid Hydrolyzed,,,,Host_AS_S1_DS1_10,d13C,75,-16.8,5.76,492.9,93,6.2,2011,24.6,4.6,Yes,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.7,,,,,,,,DS1_8 host,,4.98,Acid Hydrolyzed,,,,Host_AS_S1_DS1_08,d13C,76,-16.71,5.45,448.9,78.2,6.7,2024,22.2,3.9,Yes,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,37.5,,,,,,,,DS1_1 symb,,3.43,Acid Hydrolyzed,,,Tiny amount,Sym_AS_S1_DS1_01,d13C,77,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,37.3,,,,,,,,DS1_3 symb,,5.12,Acid Hydrolyzed,,,Small amount,Sym_AS_S1_DS1_03,d13C,78,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.8,,,,,,,,DS1_6 symb,,4.3,Acid Hydrolyzed,,,No,Sym_AS_S1_DS1_06,d13C,79,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,35.9,,,,,,,,DS1_10 symb,,5.04,Acid Hydrolyzed,,,No,Sym_AS_S1_DS1_10,d13C,80,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.7,,,,,,,,DS1_8 symb,,3.64,Acid Hydrolyzed,,,No,Sym_AS_S1_DS1_08,d13C,81,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220302,Leone,Coral Host,Leptoseris,scabra,Leptoseris scabra,Mesophotic,37.3,,,,,,,,DS2_1 host,,5.19,Acid Hydrolyzed,,,,Host_AS_S1_DS2_01,d13C,82,-18.08,6.39,471.8,98.3,5.6,1927,24.5,5.1,Yes,,,,Specialist,Leptoseris scabra
+20220302,Leone,Coral Host,Leptoseris,scabra,Leptoseris scabra,Mesophotic,38.1,,,,,,,,DS2_6 host,,5.01,Acid Hydrolyzed,,,,Host_AS_S1_DS2_06,d13C,83,-18.5,6.42,438.4,88.3,5.8,2043,21.5,4.3,Yes,,,,Specialist,Leptoseris scabra
+20220302,Leone,Coral Host,Leptoseris,scabra,Leptoseris scabra,Mesophotic,37.7,,,,,,,,DS2_9 host,,4.99,Acid Hydrolyzed,,,,Host_AS_S1_DS2_09,d13C,84,-19.81,5.71,388.7,83.5,5.4,1968,19.8,4.2,Yes,,,,Specialist,Leptoseris scabra
+20220302,Leone,Coral Host,Leptoseris,scabra,Leptoseris scabra,Mesophotic,37.6,,,,,,,,DS2_10 host,,5.2,Acid Hydrolyzed,,,,Host_AS_S1_DS2_10,d13C,85,-18.98,6.04,389.2,83.6,5.4,1967,19.8,4.3,Yes,,,,Specialist,Leptoseris scabra
+20220302,Leone,Symbiont,Leptoseris,scabra,Leptoseris scabra,Mesophotic,38.1,,,,,,,,DS2_6 symb,,5.05,Acid Hydrolyzed,,,Yes,Sym_AS_S1_DS2_06,d13C,86,,,,,,,,,,,,,Specialist,Leptoseris scabra
+20220302,Leone,Symbiont,Leptoseris,scabra,Leptoseris scabra,Mesophotic,37.7,,,,,,,,DS2_9; symb,,4.83,Acid Hydrolyzed,,,Yes,Sym_AS_S1_DS2_09,d13C,87,,,,,,,,,,,,,Specialist,Leptoseris scabra
+20220302,Leone,Symbiont,Leptoseris,scabra,Leptoseris scabra,Mesophotic,37.6,,,,,,,,DS2_10 symb,,5.14,Acid Hydrolyzed,,,Yes,Sym_AS_S1_DS2_10,d13C,88,,,,,,,,,,,,,Specialist,Leptoseris scabra
+20220302,Leone,Symbiont,Leptoseris,glabra,Leptoseris glabra,Mesophotic,37.3,,,,,,,,DS2_2 symb,Derivatized July-2022,,Derivatized- at URI,Insufficient tissue,,Tiny amount,Sym_AS_S1_DS2_02,d13C,,,,,,,,,,,,,,Specialist,Leptoseris glabra
+20220225,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,001 host,Derivatized September-2022,,Derivatized- at URI,Insufficient tissue,,Small amount,Host_AS_S1_001,d13C,,-22.42,5.59,516.4,106.1,5.7,2028,25.5,5.2,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220226,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,005 host,Derivatized September-2022,,Derivatized- at URI,Insufficient tissue,,Small amount,Host_AS_S1_005,d13C,,-20.11,5.95,504.8,96.5,6.1,2077,24.3,4.7,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220226,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,003 symb,Derivatized July-2022,,Derivatized- at URI,Insufficient tissue,,Tiny amount,Sym_AS_S1_003,d13C,,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,016 symb,Derivatized July-2022,,Derivatized- at URI,Insufficient tissue,,No,Sym_AS_S1_016,d13C,,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220226,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,005 symb,Derivatized July-2022,,Derivatized- at URI,Insufficient tissue,,No,Sym_AS_S1_005,d13C,,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220224,Leone,POM,,,,Mesophotic,38.7,,,,,,,,,,,,,,,AS_POM_01,,,,,,,,,,,,,,0.7 um,,
+20220224,Leone,POM,,,,Mesophotic,38.7,,,,,,,,,,,,,,,AS_POM_02,,,,,,,,,,,,,,0.7 um,,
+20220226,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_06,,,,,,,,,,,,,,0.7 um,,
+20220228,Leone,POM,,,,Mesophotic,36.7,,,,,,,,,,,,,,,AS_POM_08,,,,,,,,,,,,,,0.7 um,,
+20220301,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_10,,,,,,,,,,,,,,0.7 um,,
+20220302,Leone,POM,,,,Mesophotic,37.6,,,,,,,,,,,,,,,AS_POM_12,,,,,,,,,,,,,,0.7 um,,
+20220304,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_14,,,,,,,,,,,,,,0.7 um,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,40.0,,,,,,,,,,,,,,,Halimeda_AS_01,,,-2.84,5.29,456.4,11.6,45.7,3389,13.5,0.3,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,40.3,,,,,,,,,,,,,,,Halimeda_AS_02-R1,,,-2.65,6.08,416.6,11.4,42.5,3155,13.2,0.4,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,40.3,,,,,,,,,,,,,,,Halimeda_AS_02-R2,,,-1.13,4.85,414,9,53.6,3277,12.6,0.3,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,40.3,,,,,,,,,,,,,,,Halimeda_AS_03,,,-1.57,5.22,417.7,9.8,50.1,3213,13,0.3,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,40.0,,,,,,,,,,,,,,,Halimeda_AS_04,,,-2.49,4.74,444.4,11.8,44.2,3286,13.5,0.4,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,35-40,,,,,,,,,,,,,,,Halimeda_AS_05,,,-4.43,5.58,486.2,17.8,31.9,3427,14.2,0.5,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,35-40,,,,,,,,,,,,,,,Halimeda_AS_06,,,-2.84,5.27,448.4,13.5,38.9,3325,13.5,0.4,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,35-40,,,,,,,,,,,,,,,Halimeda_AS_07,,,-4.49,4.87,485.1,19.9,28.5,3406,14.2,0.6,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,35-40,,,,,,,,,,,,,,,Halimeda_AS_08,,,-1.59,4.28,437.1,11,46.5,3362,13,0.3,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,35-40,,,,,,,,,,,,,,,Halimeda_AS_09,,,-2.21,5.04,452.9,12,44,3440,13.2,0.4,,,,,,
+20220224,Leone,Macroalgae,Halimeda,,Halimeda,Mesophotic,35-40,,,,,,,,,,,,,,,Halimeda_AS_10,,,-2.12,4.45,451.2,10.4,50.6,3399,13.3,0.3,,,,,,
+20220225,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_11,,,-1.88,4.01,436.6,11.3,45.2,3419,12.8,0.3,,,,,,
+20220225,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_12,,,-2.33,4.18,439.4,12.9,39.8,3327,13.2,0.4,,,,,,
+20220226,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_13,,,-5.44,4.4,480.2,20.4,27.4,3443,13.9,0.6,,,,,,
+20220226,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_14,,,-7.79,4.39,518.6,26.6,22.7,3350,15.5,0.8,,,,,,
+20220226,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_15,,,-3.48,4.11,458.1,13.1,41,3415,13.4,0.4,,,,,,
+20220226,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_16,,,-6.19,4.95,483.4,21.5,26.3,3406,14.2,0.6,,,,,,
+20220226,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_17,,,-3.94,4.99,433.5,15.6,32.7,3296,13.2,0.5,,,,,,
+20220228,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_18,,,-4.29,3.49,448.7,11.9,43.8,3395,13.2,0.4,,,,,,
+20220228,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_19,,,-3.45,3.96,437.2,13.1,38.9,3294,13.3,0.4,,,,,,
+20220302,Leone,Macroalgae,Halimeda,,Halimeda,Shallow,5-10m,,,,,,,,,,,,,,,Halimeda_AS_20,,,-4.22,4.57,443.3,17.2,30,3301,13.4,0.5,,,,,,
+20220228,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,007 host,,,,,,,Host_AS_S1_007,,,-19.84,5.88,456.7,96,5.6,2003,22.8,4.8,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220225,Leone,Coral Host,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,002 host,,,,,,,Host_AS_S1_002,,,-19.22,4.98,590.3,123.9,5.6,2021,29.2,6.1,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.6,,,,,,,,DG2_8 host,,,,,,,Host_AS_S1_DG2_08,d13C & d15N,,-16.46,5.92,314.8,66.3,5.6,1975,16,3.4,Yes,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.3,,,,,,,,DG2_01 host,"originally 2 vials labeled this, re-weighed and acid hydrolyzed new sample (duplicates in the freezer in non-sorted box)",,,,,,Host_AS_S1_DG2_01,d13C & d15N,,-15.99,6.15,280.5,57.6,5.7,1927,14.6,3,Yes,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.8,,,,,,,,DG2_5 host,,,,,,,Host_AS_S1_DG2_05,d13C & d15N,,-15.97,6.03,317.5,68.5,5.4,2062,15.4,3.3,Yes,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Mesophotic,37.7,,,,,,,,DG2_3 host,,,,,,,Host_AS_S1_DG2_03,d13C & d15N,,-15.88,6.03,254.2,56.1,5.3,1927,13.2,2.9,Yes,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,027 host,,,,,,,Host_AS_S1_027,,,-15.68,6,243.2,56.4,5,2054,11.8,2.7,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,018 host,,,,,,,Host_AS_S1_018,,,-14.69,5.93,343.3,79.1,5.1,2056,16.7,3.9,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,025 host,,,,,,,Host_AS_S1_025,,,-14.52,5.74,378.5,86.4,5.1,2038,18.6,4.2,,,,,Generalist,Montipora grisea
+20220302,Leone,Coral Host,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,020 host,,,,,,,Host_AS_S1_020,,,-14.35,5.71,486.7,109.2,5.2,1979,24.6,5.5,,,,,Generalist,Montipora grisea
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.7,,,,,,,,DS1_4 host,,,,,,,Host_AS_S1_DS1_04,,,-18.35,5.77,483.9,87.5,6.5,2042,23.7,4.3,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.7,,,,,,,,DS1_7 host,,,,,,,Host_AS_S1_DS1_07,,,-18.06,5.86,468.3,87.2,6.3,2028,23.1,4.3,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,35.7,,,,,,,,DS1_9 host,,,,,,,Host_AS_S1_DS1_09,,,-17.23,5.53,582.7,108.7,6.3,2064,28.2,5.3,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,37.6,,,,,,,,DS1_2 host,,,,,,,Host_AS_S1_DS1_02,,,-17.2,5.49,477,89.5,6.2,1926,24.8,4.7,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Coral Host,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.5,,,,,,,,DS1_5 host,,,,,,,Host_AS_S1_DS1_05,,,-17.18,5.76,523.1,91.4,6.7,2042,25.6,4.5,,,,,Specialist,Pachyseris speciosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,3.3,,,,,,,,Pver_12 host,,,,,,,Host_S1_Pver_12,,,-17.98,6.34,673.5,121.7,6.5,2041,33,6,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,3.8,,,,,,,,Pver_02 host,,,,,,,Host_S1_Pver_02,,,-17.54,6.09,626.4,117.6,6.2,1959,32,6,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,4.5,,,,,,,,Pver_11 host,"originally missing, re-did sample ",,,,,,Host_S1_Pver_11,,,-17.48,6.15,651.8,113.7,6.7,1984,32.9,5.7,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.1,,,,,,,,Pver_09 host,,,,,,,Host_S1_Pver_09,,,-17.9,6.2,665.9,115.3,6.7,1986,33.5,5.8,TBD,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Coral Host,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.5,,,,,,,,Pver_08 host,,,,,,,Host_S1_Pver_08,,,-18.19,6.04,647.5,109.5,6.9,2010,32.2,5.5,TBD,,,,Generalist,Pocillopora verrucosa
+20220307,Fagatele,Plankton,,,"Plankton, >250 um",Surface,,,,,,,,,,,,,,,,Plankton_AS_P_005-R2,,,-18.64,7.75,424.9,82,6,2436,17.4,3.4,,,,>250 um,,
+20220307,Fagatele,Plankton,,,"Plankton, 100-250 um",Surface,,,,,,,,,,,,,,,,Plankton_AS_P_006-R2,,,-13.92,6.73,208,29.7,8.2,2461,8.5,1.2,,,,100-250 um,,
+20220307,Fagatele,Plankton,,,"Plankton, 63-100 um",Surface,,,,,,,,,,,,,,,,Plankton_AS_P_007-R1,,,-10.59,5.49,70.1,8.4,9.7,2688,2.6,0.3,,,,63-100 um,,
+20220307,Fagatele,Plankton,,,"Plankton, 63-100 um",Surface,,,,,,,,,,,,,,,,Plankton_AS_P_007-R2,,,-9.21,6.86,177.8,14.3,14.5,2235,8,0.6,,,,63-100 um,,
+20220308,Fagasa,Plankton,,,"Plankton, >250 um",Surface,,,,,,,,,,,,,,,,Plankton_AS_P_008-R2,,,-15.4,7.46,341.6,57,7,2655,12.9,2.2,,,,>250 um,,
+20220308,Fagasa,Plankton,,,"Plankton, 100-250 um",Surface,,,,,,,,,,,,,,,,Plankton_AS_P_009-R2,,,-13.83,7.47,320.7,41.4,9,2462,13,1.7,,,,100-250 um,,
+20220225,Leone,Symbiont,Leptoseris,mycetoseroides,Leptoseris mycetoseroides,Shallow,5-10m,,,,,,,,002 symb,,,,,,Yes,Sym_AS_S1_002,,,,,,,,,,,,Underhang/hole,,,Specialist,Leptoseris mycetoseroides
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.6,,,,,,,,DG2_8 symb,,,,,,Tiny amount,Sym_AS_S1_DG2_08,d13C & d15N,,,,,,,,,,,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.3,,,,,,,,DG2_1 symb,,,,,,Yes,Sym_AS_S1_DG2_01,d13C & d15N,,,,,,,,,,,,Plating,,Generalist,"Montipora grisea, Plating"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.8,,,,,,,,DG2_5 symb,,,,,,Small amount,Sym_AS_S1_DG2_05,d13C & d15N,,,,,,,,,,,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Mesophotic,37.7,,,,,,,,DG2_3 symb,,,,,,Yes,Sym_AS_S1_DG2_03,d13C & d15N,,,,,,,,,,,,Chunky,,Generalist,"Montipora grisea, Chunky"
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,027 symb,,,,,,Yes,Sym_AS_S1_027,,,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,028 symb,,,,,,Yes,Sym_AS_S1_018,,,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,025 symb,,,,,,Yes,Sym_AS_S1_025,,,,,,,,,,,,,,,Generalist,Montipora grisea
+20220302,Leone,Symbiont,Montipora,grisea,Montipora grisea,Shallow,5-10m,,,,,,,,020 symb,,,,,,Yes,Sym_AS_S1_020,,,,,,,,,,,,,,,Generalist,Montipora grisea
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.7,,,,,,,,DS1_4 symb,,,,,,Yes,Sym_AS_S1_DS1_04,,,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.7,,,,,,,,DS1_7 symb,,,,,,Yes,Sym_AS_S1_DS1_07,,,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,35.7,,,,,,,,DS1_9 symb,,,,,,Yes,Sym_AS_S1_DS1_09,,,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,37.6,,,,,,,,DS1_5 symb,,,,,,Yes,Sym_AS_S1_DS1_02,,,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220228,Leone,Symbiont,Pachyseris,speciosa,Pachyseris speciosa,Mesophotic,36.5,,,,,,,,DS1_5 symb,,,,,,Yes,Sym_AS_S1_DS1_05,,,,,,,,,,,,,,,Specialist,Pachyseris speciosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,3.3,,,,,,,,Pver_12 symb,,,,,,Yes,Sym_S1_Pver_12,,,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,3.8,,,,,,,,Pver_02 symb,,,,,,Yes,Sym_S1_Pver_02,,,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,4.5,,,,,,,,Pver_11 symb,,,,,,Small amount,Sym_S1_Pver_11,,,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.1,,,,,,,,Pver_09 symb,,,,,,Yes,Sym_S1_Pver_09,,,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220301,Leone,Symbiont,Pocillopora,verrucosa,Pocillopora verrucosa,Shallow,5.5,,,,,,,,Pver_08 symb,,,,,,Small amount,Sym_S1_Pver_08,,,,,,,,,,,,,,,Generalist,Pocillopora verrucosa
+20220225,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_03,d13C & d15N,,,,,,,,,,,,,0.7 um,,
+20220225,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_04,d13C & d15N,,,,,,,,,,,,,0.7 um,,
+20220225,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_Blank1,,,,,,,,,,,,,,0.7 um,,
+20220226,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_Blank2,,,,,,,,,,,,,,0.7 um,,
+20220301,Leone,POM,,,,Shallow,5-10m,,,,,,,,,,,,,,,AS_POM_Blank3,,,,,,,,,,,,,,0.7 um,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
