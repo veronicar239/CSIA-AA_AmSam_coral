@@ -12,10 +12,11 @@ knitr::opts_chunk$set(message=FALSE, tidy.opts=list(width.cutoff=70), tidy=TRUE)
 
 ```{r, echo=FALSE}
 library(dplyr)
+library(MASS)
 ```
 
 
-#### working environment
+#### Set working directory
 
 ```{r}
 setwd("/Users/veronica/Documents/Rprojects/postdoc\ Rprojects/ODU_postdoc_Rprojects/AmSam_isotopes/CSIA-AA_AmSam_coral")
@@ -32,18 +33,12 @@ aa.d13C[sapply(aa.d13C, is.character)] <- lapply(aa.d13C[sapply(aa.d13C, is.char
 head(aa.d13C)
 ```
 
+### Summary - data set
 
-```{r}
-# filter out AA standards (sample_ID = NA)
-aa.d13C <- subset(aa.d13C, Vial_Sample_ID != "NA")
-aa.d13C <- droplevels(aa.d13C)
-```
-
-### summary - sample set
-13 AA each sample
+Two different depths shallow and mesophotic *Montipora grisea*
 ```{r}
 aa.d13C %>% 
-  group_by(Vial_Sample_ID) %>%
+  group_by(Group, Species) %>%
       dplyr::summarise(count = n())
 ```
 
@@ -59,29 +54,307 @@ head(meta)
 
 ```{r}
 aa.d13C.meta <- meta %>% 
-  inner_join(aa.d13C, by = "Vial_Sample_ID")
+  inner_join(aa.d13C, by = c("Vial_Sample_ID", "Site", "Group", "Species"))
+
+aa.d13C.meta <- droplevels(aa.d13C.meta)
 
 dim(aa.d13C.meta)
 ```
 
-### sources
+##### select only the essential amino acids
+```{r}
+aa.d13C.ess <- aa.d13C.meta %>% dplyr::select(Group, Group2, Group3, Species, Depth, Vial_Sample_ID, Ile, Leu, Phe, Thr, Val)
+
+#aa.d13C.ess <- aa.d13C.ess %>% 
+#  filter(AA == "Ile" | AA == "Leu" | AA == "Phe" | AA == "Thr" | AA == "Val")
+
+aa.d13C.ess <- droplevels(aa.d13C.ess)
+
+head(aa.d13C.ess)
+```
+
+Select Coral Host (consumer) host data only
+```{r}
+host.aa.d13C.ess <- subset(aa.d13C.ess, Group == "Coral Host")
+host.aa.d13C.ess <- droplevels(host.aa.d13C.ess)
+```
+
+
+########################################################################
+
+## Sources
+
+Relevant source (particulate organic sources from tropical coral reefs) CSIA-AA d13C values from the literature. Only included essential AA data.
 
 ```{r}
-sources <- read.csv("AmericanSamoa_Coral-isotopes_Master_2023-10.csv", header = TRUE)
+# had issues with importing csv
+# can delete Lat and Long columns because read.csv() does not like 'degree' symbol
+# also delete 'um' (micrometer) symbol to just um
+# also delete columns with '/' (DOI, etc.) and '
+# ** or otherwise use fileEncoding="latin1" and that worked
+sources <- read.csv("Sources_EAA_literature.csv", header = TRUE, fileEncoding="latin1")
 
 sources[sapply(sources, is.character)] <- lapply(sources[sapply(sources, is.character)], as.factor)
 
 head(sources)
 ```
 
-
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+levels(sources$Group)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+*Some are phytoplankton samples from culture (Stahl et al. 2023)*
+
+Filter out irrelevant data
+```{r}
+sources <- subset(sources, Group != "Macroalgae") # not a food source for coral
+sources <- subset(sources, Notes != "15C") # temperature
+sources <- subset(sources, Species != "Artemia salina") # also missing one AAess value, NA
+sources <- subset(sources, Reference != "Shih et al. 2019 Microbial Ecology") # missing one AAess
+#sources <- subset(sources, Reference != "Stahl et al. 2023 L&O") # culture phytoplankton
+sources <- droplevels(sources)
+```
+
+
+```{r}
+sources %>%
+  group_by(Group, Environment) %>% 
+    dplyr::summarise(count = n())
+```
+
+########################################################################
+
+## Separate only source data
+
+### Add our plankton and symbiont data to source data
+
+```{r}
+sources.Samoa <- subset(aa.d13C.meta, Group != "Coral Host")
+sources.Samoa <- droplevels(sources.Samoa)
+dim(sources.Samoa)
+```
+
+#### Merge our source data with literature sources
+
+```{r}
+sources.all <- full_join(sources, sources.Samoa, by = c("Group", "Species", "Group_Reference", "Group2", "Group3", "Thr", "Ile", "Val", "Leu", "Phe", "Sample_ID", "Size_fraction"))
+dim(sources.all)
+```
+
+```{r}
+sources.all %>%
+  group_by(Group) %>% 
+    dplyr::summarise(count = n())
+```
+
+```{r}
+sources.all %>%
+  group_by(Group2) %>% 
+    dplyr::summarise(count = n())
+```
+
+
+```{r}
+sources.all %>%
+  group_by(Group3) %>% 
+    dplyr::summarise(count = n())
+```
+
+## Normalize source data *by the mean of all AAess from each group/study*
+
+```{r}
+sources.all %>%
+  group_by(Group_Reference) %>% 
+    dplyr::summarise(count = n())
+```
+
+```{r}
+# # need to use mean() instead of rowMeans()
+# # because applying a function one row at a time, and so the x input is a 1-dimensional vector.
+#
+# sources.all <- sources.all %>% 
+#   group_by(Group_Reference) %>% 
+#     mutate(EAAmean=rowMeans(c(Thr,Ile,Val,Phe,Leu)), na.rm = TRUE)
+```
+
+```{r}
+sources.all <- sources.all %>% 
+  group_by(Group_Reference) %>% 
+    mutate(EAAmean=mean(c(Thr,Ile,Val,Phe,Leu)))
+```
+
+View column to see that EAAmean was averaged across Thr,Ile,Val,Phe,Leu for each Group_Reference
+(confirmed with raw data)
+```{r}
+sources.all$EAAmean
+```
+
+Normalize for each AAess (EAA)
+```{r}
+sources.all <- sources.all %>% 
+  group_by(Group_Reference) %>% 
+    mutate(Thr_EAAn = Thr-EAAmean)
+
+sources.all <- sources.all %>% 
+  group_by(Group_Reference) %>% 
+    mutate(Ile_EAAn = Ile-EAAmean)
+
+sources.all <- sources.all %>% 
+  group_by(Group_Reference) %>% 
+    mutate(Val_EAAn = Val-EAAmean)
+
+sources.all <- sources.all %>% 
+  group_by(Group_Reference) %>% 
+    mutate(Phe_EAAn = Phe-EAAmean)
+
+sources.all <- sources.all %>% 
+  group_by(Group_Reference) %>% 
+    mutate(Leu_EAAn = Leu-EAAmean)
+```
+
+
+```{r}
+head(sources.all[,86:91])
+```
+
+
+########################################################################
+
+
+# Predicting isotopic fingerprints of primary producers
+
+## Linear Discriminant Analysis (LDA)
+
+Dimension reduction - find a linear combination of the predictors that gives maximum separation between the centers of the data while at the same time minimizing the variation within each group of data.
+
+Uses MASS package.
+
+### Normalize data by the mean
+
+Coral host data
+```{r}
+#Normalize each essential AA
+host.aa.d13C.ess$EAAmean = rowMeans(subset(host.aa.d13C.ess, select = c(Thr,Ile,Val,Leu,Phe)), na.rm = TRUE)
+host.aa.d13C.ess$Thr_EAAn = host.aa.d13C.ess$Thr-host.aa.d13C.ess$EAAmean
+host.aa.d13C.ess$Ile_EAAn = host.aa.d13C.ess$Ile-host.aa.d13C.ess$EAAmean
+host.aa.d13C.ess$Val_EAAn = host.aa.d13C.ess$Val-host.aa.d13C.ess$EAAmean
+host.aa.d13C.ess$Leu_EAAn = host.aa.d13C.ess$Leu-host.aa.d13C.ess$EAAmean
+host.aa.d13C.ess$Phe_EAAn = host.aa.d13C.ess$Phe-host.aa.d13C.ess$EAAmean
+```
+
+# LDA with POM, Plankton, Symbionts, Detritus as sources - classify the animal fractions
+
+#### create blank objects to fill with data
+```{r}
+symb.boot<-NULL
+plkt.boot<-NULL
+detritus.boot<-NULL
+pom.boot<-NULL
+#cyano.boot<-NULL
+#diat.boot<-NULL
+#dinofl.boot<-NULL
+source.boot<-NULL
+
+coral.host.class<-NULL
+
+a<-NULL
+b<-NULL
+c<-NULL
+d<-NULL
+
+auto<-NULL
+hetero<-NULL
+a_mean<-NULL
+h_mean<-NULL
+
+dist<-NULL
+
+coral.host.prop<-NULL
+prop<-NULL
+source.prop<-NULL
+```
+
+
+# LDA
+```{r}
+# The prior argument sets the prior probabilities of class membership. If unspecified, the class proportions for the training set are used. If present, the probabilities should be specified in the order of the factor levels.
+
+## Calculate an error rate for our LDA model - using source dataset
+# run an LDA with a jacknifing model fit, to look at error rate
+# the line 'CV = TRUE' makes the LDA do jacknifed (leave-one-out cross-validation) model fit
+group.lda.norm <- lda(Group ~ Ile_EAAn + Leu_EAAn + Phe_EAAn + Thr_EAAn + Val_EAAn, data = sources.all, CV = TRUE)
+```
+
+### classification of the LDA model to the sources
+```{r}
+# create a table which compares the classification of the LDA model to the sources
+ct.prod.norm <- table(sources.all$Group, group.lda.norm$class)
+ct.prod.norm
+```
+
+*Overall, Plankton and Symbiont did not classify particularly well*
+- Plankton samples are highly heterogeneous, and likely contain phytoplankton as well (or otherwise plankton feeds on phytoplankton)
+- Coral Symbionts are dinoflagellates and thus makes sense they group with POM dinoflagellates
+
+
+Looking at more specific breakdown of Plankton (Phytoplankton vs. Zooplankton)
+```{r}
+ct.prod.norm.2<-table(sources.all$Group2, group.lda.norm$class)
+ct.prod.norm.2
+```
+
+Further detail
+```{r}
+ct.prod.norm.3<-table(sources.all$Group3, group.lda.norm$class)
+ct.prod.norm.3
+```
+
+
+```{r}
+# total percent of samples correctly classified is the sum of the diagonal of this table
+sum(diag(prop.table(ct.prod.norm)))
+sum(diag(prop.table(ct.prod.norm.2)))
+sum(diag(prop.table(ct.prod.norm.3)))
+```
+
+*In situ data with phytoplankton culture*
+[1] 0.6435644
+[1] 0.3168317
+[1] 0.3267327
+
+*In situ data only*
+[1] 0.5405405
+[1] 0.5675676
+[1] 0.2567568
+
+```{r}
+# what % of each species is being correctly classified
+diag(prop.table(ct.prod.norm, 1))
+diag(prop.table(ct.prod.norm.2,1))
+diag(prop.table(ct.prod.norm.3,1))
+```
+
+*In situ data with phytoplankton culture*
+Detritus  Plankton       POM  Symbiont 
+1.0000000 0.2666667 0.8076923 0.2500000 
+1.00000000 0.07692308 0.60000000 0.25000000
+1.0000000 0.0000000 1.0000000 0.3333333
+
+
+*In situ data only*
+Detritus   Plankton        POM   Symbiont 
+1.00000000 0.06666667 0.56000000 0.55000000 
+1.0000000 0.2400000 0.7333333 0.5500000
+1.0000000 0.0000000 0.3636364 0.1250000
+
+########################################################################
+
+
+
+########################################################################
+
+
+```{r}
+sessionInfo()
+```
+
