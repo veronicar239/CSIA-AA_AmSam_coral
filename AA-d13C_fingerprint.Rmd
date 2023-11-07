@@ -1,5 +1,5 @@
 ---
-title: "AA-d13C_fingerprint"
+title: "AA-d13C fingerprinting - American Samoa Coral"
 author: "Veronica Radice"
 date: "10/16/2023"
 output: html_document
@@ -12,6 +12,10 @@ knitr::opts_chunk$set(message=FALSE, tidy.opts=list(width.cutoff=70), tidy=TRUE)
 
 ```{r, echo=FALSE}
 library(dplyr)
+library(plyr)
+library(factoextra)
+library(FactoMineR)
+library(ggplot2)
 library(MASS)
 ```
 
@@ -137,7 +141,7 @@ dim(sources.Samoa)
 #### Merge our source data with literature sources
 
 ```{r}
-sources.all <- full_join(sources, sources.Samoa, by = c("Group", "Species", "Group_Reference", "Group2", "Group3", "Thr", "Ile", "Val", "Leu", "Phe", "Sample_ID", "Size_fraction"))
+sources.all <- full_join(sources, sources.Samoa, by = c("Group", "Species", "Group_Reference", "Group2", "Group3", "Group4", "Thr", "Ile", "Val", "Leu", "Phe", "Sample_ID", "Size_fraction"))
 dim(sources.all)
 ```
 
@@ -160,7 +164,18 @@ sources.all %>%
     dplyr::summarise(count = n())
 ```
 
-## Normalize source data *by the mean of all AAess from each group/study*
+```{r}
+sources.all$Group3 <- factor(sources.all$Group3, levels = c("Detritus", "Phytoplankton-Diatom", "Phytoplankton-Dinoflagellate", "Phytoplankton-field", "Symbiont", "Symbiont-Shallow-cave", "Zooplankton"))
+```
+
+```{r}
+sources.all$Group4 <- factor(sources.all$Group4, levels = c("Detritus", "Phytoplankton-Cyanobacteria", "Phytoplankton-Diatom", "Phytoplankton-Dinoflagellate", "Phytoplankton-POM", "Phytoplankton-proxy", "Symbiont-Pocillopora-Palmyra", "Symbiont-Mesophotic", "Symbiont-Shallow", "Symbiont-Shallow-cave", "Zooplankton-Palmyra", "Zooplankton-AmSam"))
+```
+
+
+########################################################################
+
+# Normalize source data *by the mean of all AAess from each source group/study*
 
 ```{r}
 sources.all %>%
@@ -174,13 +189,13 @@ sources.all %>%
 #
 # sources.all <- sources.all %>% 
 #   group_by(Group_Reference) %>% 
-#     mutate(EAAmean=rowMeans(c(Thr,Ile,Val,Phe,Leu)), na.rm = TRUE)
+#     dplyr::mutate(EAAmean=rowMeans(c(Thr,Ile,Val,Phe,Leu)), na.rm = TRUE)
 ```
 
 ```{r}
 sources.all <- sources.all %>% 
   group_by(Group_Reference) %>% 
-    mutate(EAAmean=mean(c(Thr,Ile,Val,Phe,Leu)))
+    dplyr::mutate(EAAmean=mean(c(Thr,Ile,Val,Phe,Leu)))
 ```
 
 View column to see that EAAmean was averaged across Thr,Ile,Val,Phe,Leu for each Group_Reference
@@ -193,33 +208,511 @@ Normalize for each AAess (EAA)
 ```{r}
 sources.all <- sources.all %>% 
   group_by(Group_Reference) %>% 
-    mutate(Thr_EAAn = Thr-EAAmean)
+    dplyr::mutate(Thr_EAAn = Thr-EAAmean)
 
 sources.all <- sources.all %>% 
   group_by(Group_Reference) %>% 
-    mutate(Ile_EAAn = Ile-EAAmean)
+    dplyr::mutate(Ile_EAAn = Ile-EAAmean)
 
 sources.all <- sources.all %>% 
   group_by(Group_Reference) %>% 
-    mutate(Val_EAAn = Val-EAAmean)
+    dplyr::mutate(Val_EAAn = Val-EAAmean)
 
 sources.all <- sources.all %>% 
   group_by(Group_Reference) %>% 
-    mutate(Phe_EAAn = Phe-EAAmean)
+    dplyr::mutate(Phe_EAAn = Phe-EAAmean)
 
 sources.all <- sources.all %>% 
   group_by(Group_Reference) %>% 
-    mutate(Leu_EAAn = Leu-EAAmean)
+    dplyr::mutate(Leu_EAAn = Leu-EAAmean)
 ```
 
 
 ```{r}
-head(sources.all[,86:91])
+head(sources.all[,88:93])
+```
+
+########################################################################
+
+# PCA - sources - exploratory
+
+PCA analysis, this is just for a quick visual to see the stress vectors
+```{r}
+# by default, the function PCA() [in FactoMineR], standardizes the data automatically during the PCA; so you don’t need do this transformation before the PCA
+pca.sources <- PCA(sources.all[,89:93], scale.unit = TRUE, graph = TRUE)
+```
+
+```{r}
+pca.sources
+```
+
+# Eigenvalues / variances
+```{r}
+# examine the eigenvalues to determine the number of principal components to be considered
+
+# get_eigenvalue(pca.sources): Extract the eigenvalues/variances of principal components
+
+# eigenvalues measure the amount of variation retained by each principal component
+# Eigenvalues are large for the first PCs and small for the subsequent PCs
+# the first PCs corresponds to the directions with the maximum amount of variation in the data set
+
+# An eigenvalue > 1 indicates that PCs account for more variance than accounted by one of the original variables in standardized data
+# This is commonly used as a cutoff point for which PCs are retained
+# This holds true only when the data are standardized.
+
+eig.val <- get_eigenvalue(pca.sources)
+eig.val
+```
+
+
+```{r}
+pca.sources <- prcomp(sources.all[,89:93], scale. = TRUE, center = TRUE) #everything
+summary(pca.sources)
+```
+
+
+#### Visualize the eigenvalues
+##### SCREE plot - how many dimensions and what percent represent the data
+```{r}
+fviz_eig(pca.sources, addlabels = TRUE, ylim = c(0, 100))
+```
+
+```{r}
+# get_pca_ind(res.pca), get_pca_var(res.pca): Extract the results for individuals and variables, respectively
+# provides a list of matrices containing all the results for the active variables (coordinates, correlation between variables and axes, squared cosine and contributions)
+var <- get_pca_var(pca.sources)
+# Coordinates - var$coord: coordinates of variables to create a scatter plot
+#head(var$coord)
+# Cos2: quality on the factor map - var$cos2: quality of representation for variables on the factor map
+# It’s calculated as the squared coordinates: var.cos2 = var.coord * var.coord.
+#head(var$cos2)
+```
+
+```{r}
+# Contributions to the principal components (in percentage) of the variables to the principal components
+# The contribution of a variable (var) to a given principal component is (in percentage) : (var.cos2 * 100) / (total cos2 of the component)
+head(var$contrib)
+```
+
+#### Quality of representation
+```{r}
+# The quality of representation of the variables on factor map is called cos2 (square cosine, squared coordinates)
+
+# The closer a variable is to the circle of correlations, the better its representation on the factor map (and the more important it is to interpret these components)
+# Variables that are closed to the center of the plot are less important for the first components
+
+# library("corrplot")
+# corrplot(var$cos2, is.corr=FALSE)
+
+# plot variables
+#fviz_pca_var(pca.sources, col.var = "black")
+
+# Total cos2 of variables on Dim.1 and Dim.2
+fviz_cos2(pca.sources, choice = "var", axes = 1:2)
+```
+
+#### Contributions of variables to PCs
+```{r}
+# contributions of variables in accounting for the variability in a given principal component are expressed in percentage.
+
+# Variables that do not correlated with any PC or correlated with the last dimensions are variables with low contribution and might be removed to simplify the overall analysis.
+
+# function corrplot() [corrplot] - highlight the most contributing variables for each dimension
+# library("corrplot")
+# corrplot(var$contrib, is.corr=FALSE)    
+
+# Contributions of variables to PC1
+fviz_contrib(pca.sources, choice = "var", axes = 1, top = 10)
+# Contributions of variables to PC2
+fviz_contrib(pca.sources, choice = "var", axes = 2, top = 10)
+# The total contribution to PC1 and PC2 is obtained with the following R code:
+fviz_contrib(pca.sources, choice = "var", axes = 1:2, top = 10)
+
+# red dashed line on the graph above indicates the expected average contribution
+# If the contribution of the variables were uniform, the expected value would be 1/length(variables) = 1/10 = 10%
+# For a given component, a variable with a contribution larger than this cutoff could be considered as important in contributing to the component
+```
+
+## PCA with ellipses
+```{r}
+# pdf('PCA_sources-all_Group2_95-CI.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group2, 
+             #palette = c("black", "darkgreen"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Group2",
+             mean.point = FALSE,
+             #select.var = list(name = c("Thr_EAAn", "Ile_EAAn", "Val_EAAn", "Phe_EAAn", "Leu_EAAn")),
+             #repel = TRUE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+```{r}
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Environment, 
+             #palette = c("black", "darkgreen"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Environment",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+```
+
+```{r}
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group_Reference, 
+             #palette = c("black", "darkgreen"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Group_Reference",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+```
+
+```{r}
+# pdf('PCA_sources-all_Group3_50-CI_just4viz.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group3, 
+             palette = c("dodgerblue2", "cadetblue4", "azure4", "black", "chartreuse3", "cyan2", "chocolate1"), #brown1
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.5,
+             ellipse.type = "norm",
+             legend.title = "Group3",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+```{r}
+# pdf('PCA_sources-all_Group3_95-CI.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group3, 
+             palette = c("dodgerblue2", "cadetblue4", "azure4", "black", "chartreuse3", "cyan2", "chocolate1"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Group3",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+```{r}
+# pdf('PCA_sources-all_Group4_50-CI_just4viz.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group4, 
+             palette = c("dodgerblue2", "grey", "azure4", "cornsilk3", "black", "cadetblue4", "chartreuse3", "darkolivegreen3", "aquamarine2", "cyan2", "chocolate1", "brown1"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.5,
+             ellipse.type = "norm",
+             legend.title = "Group4",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+
+*Probably remove Symbiont-Pocillopora-Palmyra - quite distinct from AmSam symbiont data*
+
+*Our AmSam symbiont data is distinct enough as is - clear separation by both reef depth/environment (shallow, mesophotic, and shallow cave environment) and genus (Leptoseris and Montipora)*
+
+Separate our symbiont data by reef depth/environment (shallow, mesophotic, and shallow cave environment)
+
+Can merge Zooplankton data from both in situ reef locations (AmSam and Palmyra)
+
+Can merge Phytoplankton-POM (GFF 0.7 um), Phytoplankton-proxy (McMahon phyto data), and Phytoplankton-Cyanobacteria into one Phytoplankton category
+
+Culture Phytoplankton-Dinoflagellate and culture Phytoplankton-Diatoms more distinct - keep separate?
+
+
+```{r}
+PC1<-pca.sources$x[,1]
+PC2<-pca.sources$x[,2]
+PCAloadings <- data.frame(Variables = rownames(pca.sources$rotation), pca.sources$rotation)
 ```
 
 
 ########################################################################
 
+# PCA - Final sources
+
+Without Symbiont-Pocillopora-Palmyra
+```{r}
+sources.all <- subset(sources.all, Group4 != "Symbiont-Pocillopora-Palmyra")
+sources.all <- droplevels(sources.all)
+dim(sources.all)
+```
+
+Relevel sources that are similar (same group)
+```{r}
+sources.all$Group4 <- revalue(sources.all$Group4, c("Zooplankton-AmSam" = "Zooplankton", "Zooplankton-Palmyra" = "Zooplankton", "Phytoplankton-POM" = "Phytoplankton", "Phytoplankton-proxy" = "Phytoplankton", "Phytoplankton-Cyanobacteria" = "Phytoplankton"))
+```
+
+```{r}
+sources.all$Group4 <- factor(sources.all$Group4, levels = c("Detritus", "Phytoplankton", "Phytoplankton-Diatom", "Phytoplankton-Dinoflagellate", "Symbiont-Mesophotic", "Symbiont-Shallow", "Symbiont-Shallow-cave", "Zooplankton"))
+```
+
+
+# PCA - sources
+
+PCA analysis, this is just for a quick visual to see the stress vectors
+```{r}
+# by default, the function PCA() [in FactoMineR], standardizes the data automatically during the PCA; so you don’t need do this transformation before the PCA
+pca.sources <- PCA(sources.all[,89:93], scale.unit = TRUE, graph = TRUE)
+```
+
+```{r}
+pca.sources
+```
+
+# Eigenvalues / variances
+```{r}
+# examine the eigenvalues to determine the number of principal components to be considered
+
+# get_eigenvalue(pca.sources): Extract the eigenvalues/variances of principal components
+
+# eigenvalues measure the amount of variation retained by each principal component
+# Eigenvalues are large for the first PCs and small for the subsequent PCs
+# the first PCs corresponds to the directions with the maximum amount of variation in the data set
+
+# An eigenvalue > 1 indicates that PCs account for more variance than accounted by one of the original variables in standardized data
+# This is commonly used as a cutoff point for which PCs are retained
+# This holds true only when the data are standardized.
+
+eig.val <- get_eigenvalue(pca.sources)
+eig.val
+```
+
+
+```{r}
+pca.sources <- prcomp(sources.all[,89:93], scale. = TRUE, center = TRUE) #everything
+summary(pca.sources)
+```
+
+
+#### Visualize the eigenvalues
+##### SCREE plot - how many dimensions and what percent represent the data
+```{r}
+fviz_eig(pca.sources, addlabels = TRUE, ylim = c(0, 100))
+```
+
+```{r}
+# get_pca_ind(res.pca), get_pca_var(res.pca): Extract the results for individuals and variables, respectively
+# provides a list of matrices containing all the results for the active variables (coordinates, correlation between variables and axes, squared cosine and contributions)
+var <- get_pca_var(pca.sources)
+# Coordinates - var$coord: coordinates of variables to create a scatter plot
+#head(var$coord)
+# Cos2: quality on the factor map - var$cos2: quality of representation for variables on the factor map
+# It’s calculated as the squared coordinates: var.cos2 = var.coord * var.coord.
+#head(var$cos2)
+```
+
+```{r}
+# Contributions to the principal components (in percentage) of the variables to the principal components
+# The contribution of a variable (var) to a given principal component is (in percentage) : (var.cos2 * 100) / (total cos2 of the component)
+head(var$contrib)
+```
+
+#### Quality of representation
+```{r}
+# The quality of representation of the variables on factor map is called cos2 (square cosine, squared coordinates)
+
+# The closer a variable is to the circle of correlations, the better its representation on the factor map (and the more important it is to interpret these components)
+# Variables that are closed to the center of the plot are less important for the first components
+
+# library("corrplot")
+# corrplot(var$cos2, is.corr=FALSE)
+
+# plot variables
+#fviz_pca_var(pca.sources, col.var = "black")
+
+# Total cos2 of variables on Dim.1 and Dim.2
+fviz_cos2(pca.sources, choice = "var", axes = 1:2)
+```
+
+#### Contributions of variables to PCs
+```{r}
+# contributions of variables in accounting for the variability in a given principal component are expressed in percentage.
+
+# Variables that do not correlated with any PC or correlated with the last dimensions are variables with low contribution and might be removed to simplify the overall analysis.
+
+# function corrplot() [corrplot] - highlight the most contributing variables for each dimension
+# library("corrplot")
+# corrplot(var$contrib, is.corr=FALSE)    
+
+# Contributions of variables to PC1
+fviz_contrib(pca.sources, choice = "var", axes = 1, top = 10)
+# Contributions of variables to PC2
+fviz_contrib(pca.sources, choice = "var", axes = 2, top = 10)
+# The total contribution to PC1 and PC2 is obtained with the following R code:
+fviz_contrib(pca.sources, choice = "var", axes = 1:2, top = 10)
+
+# red dashed line on the graph above indicates the expected average contribution
+# If the contribution of the variables were uniform, the expected value would be 1/length(variables) = 1/10 = 10%
+# For a given component, a variable with a contribution larger than this cutoff could be considered as important in contributing to the component
+```
+
+## PCA with ellipses
+```{r}
+# pdf('PCA_sources-all_Group2_95-CI.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group2, 
+             #palette = c("black", "darkgreen"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Group2",
+             mean.point = FALSE,
+             #select.var = list(name = c("Thr_EAAn", "Ile_EAAn", "Val_EAAn", "Phe_EAAn", "Leu_EAAn")),
+             #repel = TRUE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+```{r}
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Environment, 
+             #palette = c("black", "darkgreen"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Environment",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+```
+
+
+```{r}
+# pdf('PCA_sources-all_Group3_50-CI_just4viz.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group3, 
+             palette = c("dodgerblue2", "cadetblue4", "azure4", "black", "chartreuse3", "cyan2", "chocolate1"), #brown1
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.5,
+             ellipse.type = "norm",
+             legend.title = "Group3",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+```{r}
+# pdf('PCA_sources-all_Group3_95-CI.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group3, 
+             palette = c("dodgerblue2", "cadetblue4", "azure4", "black", "chartreuse3", "cyan2", "chocolate1"),
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.95,
+             ellipse.type = "norm",
+             legend.title = "Group3",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+```{r}
+# pdf('PCA_sources-all_Group4_50-CI_just4viz.pdf', width=5, height=4, paper='special')
+
+fviz_pca_ind(pca.sources,
+             axes = c(1,2),
+             pointsize = 3,
+             geom.ind = "point", # show points only (but not "text")
+             col.ind = sources.all$Group4, 
+             palette = c("dodgerblue2", "black", "azure4", "cadetblue4", "chartreuse3", "aquamarine2", "cyan2", "chocolate1", "brown1"), #"grey", "cornsilk3", "darkolivegreen3", 
+             #palette = "Dark2",
+             addEllipses = TRUE, # Concentration ellipses
+             ellipse.level = 0.5,
+             ellipse.type = "norm",
+             legend.title = "Group4",
+             mean.point = FALSE,
+             ggtheme = theme_classic(base_size = 12),
+             title = "" 
+             )
+
+#dev.off()
+```
+
+
+########################################################################
 
 # Predicting isotopic fingerprints of primary producers
 
@@ -309,13 +802,20 @@ ct.prod.norm.3<-table(sources.all$Group3, group.lda.norm$class)
 ct.prod.norm.3
 ```
 
+Even more detail
+```{r}
+ct.prod.norm.4<-table(sources.all$Group4, group.lda.norm$class)
+ct.prod.norm.4
+```
 
 ```{r}
 # total percent of samples correctly classified is the sum of the diagonal of this table
 sum(diag(prop.table(ct.prod.norm)))
 sum(diag(prop.table(ct.prod.norm.2)))
 sum(diag(prop.table(ct.prod.norm.3)))
+sum(diag(prop.table(ct.prod.norm.4)))
 ```
+
 
 *In situ data with phytoplankton culture*
 [1] 0.6435644
@@ -332,7 +832,9 @@ sum(diag(prop.table(ct.prod.norm.3)))
 diag(prop.table(ct.prod.norm, 1))
 diag(prop.table(ct.prod.norm.2,1))
 diag(prop.table(ct.prod.norm.3,1))
+diag(prop.table(ct.prod.norm.4,1))
 ```
+
 
 *In situ data with phytoplankton culture*
 Detritus  Plankton       POM  Symbiont 
@@ -346,6 +848,7 @@ Detritus   Plankton        POM   Symbiont
 1.00000000 0.06666667 0.56000000 0.55000000 
 1.0000000 0.2400000 0.7333333 0.5500000
 1.0000000 0.0000000 0.3636364 0.1250000
+
 
 ########################################################################
 
